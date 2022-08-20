@@ -5,15 +5,19 @@ const  axios = require('axios').default
 
 
 let Login = () => {
+    const [data, setData] = useState([])
 
-
+    useEffect(() => getData,[])
 const getData = async()=> {
-
-let res = await axios.get('http://nodeserver-env-1.eba-qqjyacfm.eu-west-2.elasticbeanstalk.com/get');
+try {
+    let res = await axios.get('http://nodeserver-env-1.eba-qqjyacfm.eu-west-2.elasticbeanstalk.com/get');
     setData([...res.data]);
+
+} catch (error) {
+    console.log(error);
 }
-const [data, setData] = useState([])
-useEffect(() => getData,[])
+
+
 
     return(
         <div>
@@ -22,5 +26,5 @@ useEffect(() => getData,[])
         Login page is here
         </div>
     )
-}
+}}
 export default Login;

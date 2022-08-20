@@ -6,9 +6,18 @@ import User from './pages/user';
 import Charts from './pages/charts';
 import NavBar from './comps/NavBar';
 import NavBarTwo from './comps/NavBarTwo';
+const  axios = require('axios').default
+
 
 function App() {
+
+  axios.get('http://nodeserver-env-1.eba-qqjyacfm.eu-west-2.elasticbeanstalk.com/get')
+  .then((res) => console.log(res))
+  .catch((err) => console.log(err))
+
+
   return (
+
     <div className="App-header">
       <h1> Welcome!</h1>
     <NavBar />
