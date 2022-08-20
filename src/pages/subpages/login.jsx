@@ -11,7 +11,7 @@ let getData = () => {
     axios.get('http://nodeserver-env-1.eba-qqjyacfm.eu-west-2.elasticbeanstalk.com/get')
     .then((res) => setData(res.data))}
     
-    useEffect(() => getData,[])
+    useEffect(() => getData,[data])
 
 
 
