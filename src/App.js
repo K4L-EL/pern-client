@@ -5,6 +5,7 @@ import About from './pages/about';
 import User from './pages/user';
 import Charts from './pages/charts';
 import NavBar from './comps/NavBar';
+import NavBarTwo from './comps/NavBarTwo';
 
 function App() {
   return (
@@ -13,7 +14,7 @@ function App() {
     <NavBar />
     <Routes>
        <Route path = '/about' element = {<About />} />
-       <Route path = '/user' element = {<User />} />
+       <Route path = '/user/*' element = {<User />} />
        <Route path = '/charts' element = {<Charts />} />
 
     </Routes>
