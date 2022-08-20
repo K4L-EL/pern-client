@@ -10,13 +10,14 @@ let User = () => {
     return (
         <div>
             <h1>This is the user page:</h1>
+            <NavBarTwo/>
         <Routes>
             <Route path = 'login' element = {<Login />} />
             <Route path ='picture' element = {<Picture />} />
             <Route path = 'profile' element = {<Profile />} />
 
         </Routes>
-        <NavBarTwo/>
+     
         </div>
     )
 }
