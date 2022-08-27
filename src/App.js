@@ -6,6 +6,8 @@ import User from './pages/user';
 import Charts from './pages/charts';
 import NavBar from './comps/NavBar';
 import NavBarTwo from './comps/NavBarTwo';
+import Button from "react-bootstrap/Button"
+import "bootstrap/dist/css/bootstrap.min.css"
 const  axios = require('axios').default
 
 
@@ -20,6 +22,7 @@ function App() {
 
     <div className="App-header">
       <h1> Welcome!</h1>
+      <button>test</button>
     <NavBar />
     <Routes>
        <Route path = '/about' element = {<About />} />
