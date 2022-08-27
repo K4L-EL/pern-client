@@ -1,4 +1,5 @@
 import React, {useState, useEffect} from 'react';
+import Note from '../card'
 const  axios = require('axios').default
 
 
@@ -24,7 +25,7 @@ let getData = () => {
         <div>
             <button onClick={getData}>GET DATA</button>
             {console.log(data)}
-            {toggle?data.map(e=><p key= {e.id}>{e.id}+{e.first_name}</p>):null}
+            {toggle?data.map(e=><Note key= {e.id} fName= {e.first_name} lName = {e.last_name} gender={e.gender} balance = {e.balance} />):null}
         Login page is here
         </div>
     )

@@ -22,7 +22,6 @@ function App() {
 
     <div className="App-header">
       <h1> Welcome!</h1>
-      <button>test</button>
     <NavBar />
     <Routes>
        <Route path = '/about' element = {<About />} />
