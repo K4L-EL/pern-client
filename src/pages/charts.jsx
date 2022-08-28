@@ -1,6 +1,6 @@
 import React from "react";
 import {useSelector, useDispatch} from 'react-redux'
-import { incremen, decerement, double, increment} from '../redux/Counter'
+import { incremen, decerement, double, increment} from '../redux/counterSlice'
 let Charts = () => {
     const count = useSelector((state) => state.counter.value.number)
     const name = useSelector((state) => state.counter.value.name)

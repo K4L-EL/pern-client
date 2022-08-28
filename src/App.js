@@ -1,4 +1,3 @@
-import logo from './logo.svg';
 import './App.css';
 import {Routes, Route, Link} from "react-router-dom"
 import About from './pages/about';
@@ -8,6 +7,9 @@ import NavBar from './comps/NavBar';
 import NavBarTwo from './comps/NavBarTwo';
 import Button from "react-bootstrap/Button"
 import "bootstrap/dist/css/bootstrap.min.css"
+import Container from 'react-bootstrap/Container'
+import Row from 'react-bootstrap/Row'
+import Col from 'react-bootstrap/Col'
 
 const  axios = require('axios').default
 
@@ -22,14 +24,18 @@ function App() {
   return (
 
     <div className="App-header">
+      <Container>
+        <Col>
       <h1> Welcome!</h1>
+        
+        </Col>
     <NavBar />
     <Routes>
        <Route path = '/about' element = {<About />} />
        <Route path = '/user/*' element = {<User />} />
        <Route path = '/charts' element = {<Charts />} />
-
     </Routes>
+    </Container>
     </div>
   );
 }
