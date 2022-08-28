@@ -21,7 +21,6 @@ let getData = () => {
     // useEffect(() => getData,[data])
     return(
         <div>
-            <Container>
             <Row>
             <button onClick={getData}>GET DATA</button>
             </Row>
@@ -29,7 +28,6 @@ let getData = () => {
             {console.log(data)}
             {toggle?data.map( e =><Col><Note key= {e.id} fName= {e.first_name} lName = {e.last_name} gender={e.gender} balance = {e.balance} /></Col>):null}
             </Row>
-            </Container>
         </div>
     )
 }

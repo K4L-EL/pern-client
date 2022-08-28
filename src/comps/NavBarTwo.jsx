@@ -8,20 +8,17 @@ import Container from 'react-bootstrap/Container'
 let NavBarTwo = () => {
 
 return (
-    <div>
+
         <Navbar>
-            <Container>
-                <Navbar.Brand href='/'> Logo</Navbar.Brand>
 
                 <ul><Link to = {`login`}>login</Link></ul>
                 <ul><Link to = {`picture`}>picture</Link></ul>
                 <ul><Link to = {`profile`}>profile</Link></ul>
-            </Container>
 
         </Navbar>
 
 
-    </div>
+    
 )
 
 }

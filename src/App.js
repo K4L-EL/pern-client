@@ -24,17 +24,23 @@ function App() {
   return (
 
     <div className="App-header">
-      <Container>
-        <Col>
-      <h1> Welcome!</h1>
-        
-        </Col>
-    <NavBar />
+      <Container className='Container'>
+
+       <Row>
+        <Col className= 'Col' sm = {3}>
+       <h1> Welcome!</h1>
+      <NavBar />
+      </Col>
+  
+<Col sm ={9}>
     <Routes>
        <Route path = '/about' element = {<About />} />
        <Route path = '/user/*' element = {<User />} />
        <Route path = '/charts' element = {<Charts />} />
     </Routes>
+    </Col>
+    </Row>
+  
     </Container>
     </div>
   );

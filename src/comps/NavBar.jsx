@@ -12,13 +12,10 @@ let NavBar = () =>{
     return (
        
             <Navbar>
-        <Container>
 
-                <Nav.Link href = '/user'>User</Nav.Link>
                <ul><Link to = '/about'>About</Link></ul>
                <ul> <Link to = '/user'>User</Link></ul> 
                <ul>  <Link to = '/charts'>Charts</Link></ul> 
-        </Container>
         
 
             </Navbar>
