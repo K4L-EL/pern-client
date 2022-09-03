@@ -10,6 +10,8 @@ import "bootstrap/dist/css/bootstrap.min.css"
 import Container from 'react-bootstrap/Container'
 import Row from 'react-bootstrap/Row'
 import Col from 'react-bootstrap/Col'
+import SideMenu from './comps/sidMenu'
+import React, {useState} from 'react'
 
 const  axios = require('axios').default
 
@@ -20,21 +22,25 @@ function App() {
   .then((res) => console.log(res))
   .catch((err) => console.log(err))
 
-
+  const [toggle, setToggle] = useState(true)
+  let toggleHandle = () => {
+    setToggle(!toggle)
+  }
+ 
   return (
 
     <div className="App-header">
       <Container className='Container'>
 
        <Row>
-        <Col className= 'Col' sm = {3}>
-       <h1> Welcome!</h1>
-      <NavBar />
-      </Col>
+       {toggle?<SideMenu />:null}
+        
   
 <Col sm ={9}>
+  <button onClick = {toggleHandle} >Menu</button>
     <Routes>
        <Route path = '/about' element = {<About />} />
+       <Route path = '/' element = {<About />} />
        <Route path = '/user/*' element = {<User />} />
        <Route path = '/charts' element = {<Charts />} />
     </Routes>
