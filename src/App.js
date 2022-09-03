@@ -12,6 +12,7 @@ import Row from 'react-bootstrap/Row'
 import Col from 'react-bootstrap/Col'
 import SideMenu from './comps/sidMenu'
 import React, {useState} from 'react'
+import CollapsedMenu from './comps/sideBarCollpsed'
 
 const  axios = require('axios').default
 
@@ -33,7 +34,7 @@ function App() {
       <Container className='Container'>
 
        <Row>
-       {toggle?<SideMenu />:null}
+       {toggle?<SideMenu />:<CollapsedMenu />}
         
   
 <Col sm ={9}>
