@@ -37,8 +37,8 @@ function App() {
        {toggle?<SideMenu />:<CollapsedMenu />}
         
   
-<Col sm ={9}>
-  <button onClick = {toggleHandle} >Menu</button>
+<Col >
+  <Button onClick = {toggleHandle} >Menu</Button>
     <Routes>
        <Route path = '/about' element = {<About />} />
        <Route path = '/' element = {<About />} />
