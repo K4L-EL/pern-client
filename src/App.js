@@ -38,7 +38,7 @@ function App() {
         
   
 <Col >
-  <Button onClick = {toggleHandle} >Menu</Button>
+  <Button onClick = {toggleHandle} >Open</Button>
     <Routes>
        <Route path = '/about' element = {<About />} />
        <Route path = '/' element = {<About />} />
