@@ -22,7 +22,7 @@ let getData = () => {
     return(
         <div>
             <Row>
-            <button onClick={getData}>GET DATA</button>
+            <button onClick={getData}>FETCH DATA</button>
             </Row>
             <Row>
             {console.log(data)}
